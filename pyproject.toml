@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hisendal"
+version = "0.1.0"
+description = ""
+authors = ["sharpordie <sharpordie@example.org>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+adb-shell = "^0.4.3"
+Kivy = "2.1.0"
+kivymd = {url = "https://github.com/kivymd/KivyMD/archive/master.zip"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+buildozer = "^1.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
