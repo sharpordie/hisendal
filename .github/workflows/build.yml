@@ -12,7 +12,6 @@ jobs:
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
-          workdir: hisenspy
           buildozer_version: master
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
