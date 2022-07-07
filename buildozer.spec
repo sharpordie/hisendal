@@ -46,6 +46,7 @@ requirements = python3, \
                pyasn1, \
                rsa, \
                urllib3, \
+               charset_normalizer, \
                requests
 
 # (str) Custom source folders for requirements
