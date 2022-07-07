@@ -45,6 +45,7 @@ requirements = python3, \
                cryptography, \
                pyasn1, \
                rsa, \
+               urllib3, \
                requests
 
 # (str) Custom source folders for requirements
