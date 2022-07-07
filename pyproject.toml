@@ -6,13 +6,19 @@ authors = ["sharpordie <sharpordie@example.org>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-adb-shell = "^0.4.3"
 Kivy = "2.1.0"
 kivymd = {url = "https://github.com/kivymd/KivyMD/archive/master.zip"}
+requests = "^2.28.1"
+adb-shell = {url = "https://github.com/JeffLIrion/adb_shell/archive/refs/heads/master.zip"}
+aiofiles = "^0.8.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 buildozer = "^1.3.0"
+black = {version = "^22.6.0", allow-prereleases = true}
+
+[tool.black]
+line-length = 120
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

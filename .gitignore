@@ -22,3 +22,8 @@ __pycache__/
 *.pyo
 *.sqlite
 adbkey*
+
+*.apk
+*.txt
+cli.py
+adblight.py

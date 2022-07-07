@@ -44,7 +44,8 @@ requirements = python3, \
                adb_shell, \
                cryptography, \
                pyasn1, \
-               rsa
+               rsa, \
+               requests
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
