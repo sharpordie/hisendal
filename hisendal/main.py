@@ -32,6 +32,7 @@ MDScreen:
                 disabled: app.loading
 """
 
+CACHE_FOLDER_NAME = abspath(join(dirname(__file__), "cache"))
 
 class MainApp(MDApp):
     loading = BooleanProperty(False)
@@ -42,8 +43,6 @@ class MainApp(MDApp):
         return Builder.load_string(KV)
 
     def update(self):
-        root_folder = self.user_data_dir
-        cache_folder = join(root_folder, 'cache')
         self.loading = True
         website = "arm64-v8a"
         website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
@@ -52,7 +51,7 @@ class MainApp(MDApp):
         address = search(pattern, content).group(1)
         address = f"https://repo.kodinerds.net/{address}"
         package = from_address(address)
-        pvt_key = join(cache_folder, "adbkey")
+        pvt_key = join(CACHE_FOLDER_NAME, "adbkey")
         pub_key = pvt_key + ".pub"
         if not exists(pvt_key):
             keygen(pvt_key)
