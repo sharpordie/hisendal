@@ -38,9 +38,12 @@ class MainApp(MDApp):
 
     def build(self):
         self.theme_cls.theme_style = "Dark"
+        self.initilize_global_vars()
         return Builder.load_string(KV)
 
     def update(self):
+        root_folder = self.user_data_dir
+        cache_folder = join(root_folder, 'cache')
         self.loading = True
         website = "arm64-v8a"
         website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
@@ -49,7 +52,7 @@ class MainApp(MDApp):
         address = search(pattern, content).group(1)
         address = f"https://repo.kodinerds.net/{address}"
         package = from_address(address)
-        pvt_key = join(dirname(abspath(__file__)), "adbkey")
+        pvt_key = join(cache_folder, "adbkey")
         pub_key = pvt_key + ".pub"
         if not exists(pvt_key):
             keygen(pvt_key)

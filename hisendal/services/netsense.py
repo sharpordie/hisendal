@@ -1,10 +1,12 @@
-from os.path import basename, isabs, join
+from os.path import abspath, basename, dirname, isabs, join
 from re import search
 from tempfile import mkdtemp
 from typing import Optional
 from urllib.parse import urlparse
 
 from requests import get, head
+
+CACHE_FOLDER_NAME = abspath(join(dirname(__file__), "cache"))
 
 
 def from_address(address: str, suggest: Optional[str] = None) -> str:
@@ -25,7 +27,7 @@ def get_suggest(address: str, suggest: Optional[str] = None) -> str:
         content = headers["content-disposition"]
         suggest = search(pattern, content).group(2)
     if not suggest:
-        suggest = join(mkdtemp(), basename(urlparse(address).path))
+        suggest = join(CACHE_FOLDER_NAME, basename(urlparse(address).path))
     if not isabs(suggest):
-        suggest = join(mkdtemp(), basename(suggest))
+        suggest = join(CACHE_FOLDER_NAME, basename(suggest))
     return suggest
