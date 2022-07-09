@@ -39,7 +39,6 @@ class MainApp(MDApp):
 
     def build(self):
         self.theme_cls.theme_style = "Dark"
-        self.initilize_global_vars()
         return Builder.load_string(KV)
 
     def update(self):
