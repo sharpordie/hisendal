@@ -1,4 +1,4 @@
-from os.path import abspath, basename, dirname, exists, join
+from os.path import abspath, basename, dirname, exists, join, getsize
 from re import search
 from threading import Thread
 
@@ -9,6 +9,8 @@ from kivy.app import App
 from kivy.properties import BooleanProperty, ObjectProperty
 from kivy.uix.boxlayout import BoxLayout
 from requests import get
+
+from services.netsense import from_address
 
 
 class MainView(BoxLayout):
@@ -53,9 +55,26 @@ class MainView(BoxLayout):
             content = get(website, headers={"user-agent": "mozilla/5.0"}, allow_redirects=True).content.decode()
             address = search(pattern, content).group(1)
             address = f"https://repo.kodinerds.net/{address}"
-            self.results.text = basename(address)
+            package = from_address(address)
+
+            pvt_key = join(abspath(join(dirname(__file__))), "adbkey")
+            pub_key = pvt_key + ".pub"
+            if not exists(pvt_key):
+                keygen(pvt_key)
+            with open(pub_key) as f:
+                pub_bin = f.read()
+            with open(pvt_key) as f:
+                pvt_bin = f.read()
+            
+            manager = AdbDeviceTcp("192.168.1.62")
+            manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
+            filesize = getsize(package)
+            deposit = join("/sdcard", basename(package))
+            manager.push(package, deposit)
+            manager.shell(f"cat {deposit} | pm install -S {filesize}")
+            self.results.text = "INSTALLED"
         except Exception as e:
-            self.results.text = e
+            self.results.text = str(e)
         finally:
             self.loading = False
 
