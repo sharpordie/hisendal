@@ -1,8 +1,10 @@
+from asyncio import run, get_event_loop
 from os.path import abspath, basename, dirname, exists, join, getsize
 from re import search
 from threading import Thread
 
 from adb_shell.adb_device import AdbDeviceTcp
+from adb_shell.adb_device_async import AdbDeviceTcpAsync
 from adb_shell.auth.keygen import keygen
 from adb_shell.auth.sign_pythonrsa import PythonRSASigner
 from kivy.app import App
@@ -24,7 +26,7 @@ class MainView(BoxLayout):
         Thread(target=self._gather).start()
 
     def update(self):
-        Thread(target=self._update).start()
+        Thread(target=run, args=(self._update(),)).start()
 
     def _gather(self):
         self.loading = True
@@ -46,7 +48,7 @@ class MainView(BoxLayout):
         finally:
             self.loading = False
 
-    def _update(self):
+    async def _update(self):
         try:
             self.loading = True
             website = "arm64-v8a"
@@ -66,12 +68,12 @@ class MainView(BoxLayout):
             with open(pvt_key) as f:
                 pvt_bin = f.read()
             
-            manager = AdbDeviceTcp("192.168.1.62")
-            manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
+            manager = AdbDeviceTcpAsync("192.168.1.62")
+            await manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
             filesize = getsize(package)
             deposit = join("/sdcard", basename(package))
-            manager.push(package, deposit)
-            manager.shell(f"cat {deposit} | pm install -S {filesize}")
+            await manager.push(package, deposit, read_timeout_s=20)
+            await manager.shell(f"cat {deposit} | pm install -S {filesize}")
             self.results.text = "INSTALLED"
         except Exception as e:
             self.results.text = str(e)
