@@ -43,13 +43,13 @@ class MainApp(MDApp):
         Thread(target=self._update).start()
 
     def _update(self):
-        website = "arm64-v8a"
-        website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
-        pattern = 'download=(.*Matrix.apk)(?=")'
-        content = urlopen(Request(website, headers={"user-agent": "mozilla/5.0"})).read().decode()
-        address = search(pattern, content).group(1)
-        address = f"https://repo.kodinerds.net/{address}"
-        package = from_address(address)
+        # website = "arm64-v8a"
+        # website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
+        # pattern = 'download=(.*Matrix.apk)(?=")'
+        # content = urlopen(Request(website, headers={"user-agent": "mozilla/5.0"})).read().decode()
+        # address = search(pattern, content).group(1)
+        # address = f"https://repo.kodinerds.net/{address}"
+        # package = from_address(address)
         pvt_key = join(CACHE_FOLDER_NAME, "adbkey")
         pub_key = pvt_key + ".pub"
         if not exists(pvt_key):
@@ -63,10 +63,10 @@ class MainApp(MDApp):
             manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
         except:
             pass
-        filesize = getsize(package)
-        deposit = join("/sdcard", basename(package))
-        manager.push(package, deposit)
-        manager.shell(f"cat {deposit} | pm install -S {filesize}")
+        # filesize = getsize(package)
+        # deposit = join("/sdcard", basename(package))
+        # manager.push(package, deposit)
+        # manager.shell(f"cat {deposit} | pm install -S {filesize}")
 
 
 if __name__ == "__main__":
