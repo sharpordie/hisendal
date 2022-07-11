@@ -1,5 +1,5 @@
-from asyncio import run, get_event_loop
-from os.path import abspath, basename, dirname, exists, join, getsize
+from asyncio import get_event_loop, run
+from os.path import abspath, basename, dirname, exists, getsize, join
 from re import search
 from threading import Thread
 
@@ -12,7 +12,7 @@ from kivy.properties import BooleanProperty, ObjectProperty
 from kivy.uix.boxlayout import BoxLayout
 from requests import get
 
-from services.netsense import from_address
+from services.netsense import from_address, from_dropbox
 
 
 class MainView(BoxLayout):
@@ -25,12 +25,14 @@ class MainView(BoxLayout):
     def gather(self):
         Thread(target=self._gather).start()
 
+    def unpack(self):
+        Thread(target=run, args=(self._unpack(),)).start()
+
     def update(self):
         Thread(target=run, args=(self._update(),)).start()
 
     def _gather(self):
         self.loading = True
-
         pvt_key = join(abspath(join(dirname(__file__))), "adbkey")
         pub_key = pvt_key + ".pub"
         if not exists(pvt_key):
@@ -48,6 +50,30 @@ class MainView(BoxLayout):
         finally:
             self.loading = False
 
+    async def _unpack(self):
+        try:
+            self.loading = True
+            address = f"https://www.dropbox.com/s/f5dz07b4t4bm9s3/shield_dummies_20220710.zip?dl=0"
+            package = from_dropbox(address)
+            pvt_key = join(abspath(join(dirname(__file__))), "adbkey")
+            pub_key = pvt_key + ".pub"
+            if not exists(pvt_key):
+                keygen(pvt_key)
+            with open(pub_key) as f:
+                pub_bin = f.read()
+            with open(pvt_key) as f:
+                pvt_bin = f.read()
+            manager = AdbDeviceTcpAsync("192.168.1.62")
+            await manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
+            deposit = join("/sdcard", basename(package))
+            await manager.push(package, deposit, read_timeout_s=20)
+            await manager.shell(f"cd {dirname(deposit)} ; unzip -o {deposit}")
+            self.results.text = "UNPACKED"
+        except Exception as e:
+            self.results.text = str(e)
+        finally:
+            self.loading = False
+
     async def _update(self):
         try:
             self.loading = True
@@ -58,7 +84,6 @@ class MainView(BoxLayout):
             address = search(pattern, content).group(1)
             address = f"https://repo.kodinerds.net/{address}"
             package = from_address(address)
-
             pvt_key = join(abspath(join(dirname(__file__))), "adbkey")
             pub_key = pvt_key + ".pub"
             if not exists(pvt_key):
@@ -67,7 +92,6 @@ class MainView(BoxLayout):
                 pub_bin = f.read()
             with open(pvt_key) as f:
                 pvt_bin = f.read()
-            
             manager = AdbDeviceTcpAsync("192.168.1.62")
             await manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
             filesize = getsize(package)

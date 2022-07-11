@@ -25,5 +25,6 @@ adbkey*
 
 *.apk
 *.txt
+*.zip
 cli.py
 adblight.py

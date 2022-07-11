@@ -9,12 +9,17 @@
             size_hint: 1.0, 0.70
             text: "HELLO"
         Button:
-            size_hint: 1.0, 0.15
+            size_hint: 1.0, 0.1
             text: "GATHER"
             on_release: root.gather()
             disabled: root.loading
         Button:
-            size_hint: 1.0, 0.15
+            size_hint: 1.0, 0.1
+            text: "UNPACK"
+            on_release: root.unpack()
+            disabled: root.loading
+        Button:
+            size_hint: 1.0, 0.1
             text: "UPDATE"
             on_release: root.update()
             disabled: root.loading

@@ -18,6 +18,8 @@ def from_address(address: str, suggest: Optional[str] = None) -> str:
         content.close()
     return fetched
 
+def from_dropbox(address: str) -> str:
+    return from_address(address.split('?')[0] + "?dl=1")
 
 def get_suggest(address: str, suggest: Optional[str] = None) -> str:
     headers = head(address, allow_redirects=True).headers
