@@ -1,4 +1,4 @@
-from asyncio import get_event_loop, run
+from asyncio import run
 from os.path import abspath, basename, dirname, exists, getsize, join
 from re import search
 from threading import Thread
@@ -16,6 +16,7 @@ from services.netsense import from_address, from_dropbox
 
 
 class MainView(BoxLayout):
+    address = ObjectProperty()
     results = ObjectProperty()
     loading = BooleanProperty(False)
 
@@ -42,19 +43,17 @@ class MainView(BoxLayout):
         with open(pvt_key) as f:
             pvt_bin = f.read()
         try:
-            manager = AdbDeviceTcp("192.168.1.62")
+            manager = AdbDeviceTcp(self.address.text)
             manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
-            self.results.text = manager.shell("getprop ro.product.model")
-        except:
-            self.results.text = "Authentication required"
+            self.results.text = manager.shell("getprop ro.product.model").strip()
+        except Exception as e:
+            self.results.text = str(e)
         finally:
             self.loading = False
 
     async def _unpack(self):
         try:
             self.loading = True
-            address = f"https://www.dropbox.com/s/f5dz07b4t4bm9s3/shield_dummies_20220710.zip?dl=0"
-            package = from_dropbox(address)
             pvt_key = join(abspath(join(dirname(__file__))), "adbkey")
             pub_key = pvt_key + ".pub"
             if not exists(pvt_key):
@@ -63,8 +62,10 @@ class MainView(BoxLayout):
                 pub_bin = f.read()
             with open(pvt_key) as f:
                 pvt_bin = f.read()
-            manager = AdbDeviceTcpAsync("192.168.1.62")
+            manager = AdbDeviceTcpAsync(self.address.text)
             await manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
+            address = f"https://www.dropbox.com/s/f5dz07b4t4bm9s3/shield_dummies_20220710.zip?dl=0"
+            package = from_dropbox(address)
             deposit = join("/sdcard", basename(package))
             await manager.push(package, deposit, read_timeout_s=20)
             await manager.shell(f"cd {dirname(deposit)} ; unzip -o {deposit}")
@@ -72,18 +73,12 @@ class MainView(BoxLayout):
         except Exception as e:
             self.results.text = str(e)
         finally:
+            await manager.close()
             self.loading = False
 
     async def _update(self):
         try:
             self.loading = True
-            website = "arm64-v8a"
-            website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
-            pattern = 'download=(.*Matrix.apk)(?=")'
-            content = get(website, headers={"user-agent": "mozilla/5.0"}, allow_redirects=True).content.decode()
-            address = search(pattern, content).group(1)
-            address = f"https://repo.kodinerds.net/{address}"
-            package = from_address(address)
             pvt_key = join(abspath(join(dirname(__file__))), "adbkey")
             pub_key = pvt_key + ".pub"
             if not exists(pvt_key):
@@ -92,8 +87,16 @@ class MainView(BoxLayout):
                 pub_bin = f.read()
             with open(pvt_key) as f:
                 pvt_bin = f.read()
-            manager = AdbDeviceTcpAsync("192.168.1.62")
+            manager = AdbDeviceTcpAsync(self.address.text)
             await manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
+            bitness = (await manager.shell("uname -m")).strip()
+            website = "arm64-v8a" if bitness == "aarch64" else "armeabi-v7a"
+            website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
+            pattern = 'download=(.*Matrix.apk)(?=")'
+            content = get(website, headers={"user-agent": "mozilla/5.0"}, allow_redirects=True).content.decode()
+            address = search(pattern, content).group(1)
+            address = f"https://repo.kodinerds.net/{address}"
+            package = from_address(address)
             filesize = getsize(package)
             deposit = join("/sdcard", basename(package))
             await manager.push(package, deposit, read_timeout_s=20)
@@ -102,6 +105,7 @@ class MainView(BoxLayout):
         except Exception as e:
             self.results.text = str(e)
         finally:
+            await manager.close()
             self.loading = False
 
 

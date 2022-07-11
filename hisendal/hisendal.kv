@@ -1,4 +1,5 @@
 <MainView>:
+    address: address
     results: results
     BoxLayout:
         orientation: "vertical"
@@ -6,8 +7,15 @@
         spacing: 16
         Label:
             id: results
-            size_hint: 1.0, 0.70
+            size_hint: 1.0, 0.60
             text: "HELLO"
+        TextInput:
+            id: address
+            size_hint: 1.0, None
+            height: 30
+            halign: "center"
+            valign: "center"
+            hint_text: "192.168.1.XX"
         Button:
             size_hint: 1.0, 0.1
             text: "GATHER"
