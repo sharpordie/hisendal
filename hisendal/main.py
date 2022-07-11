@@ -1,7 +1,6 @@
-from os.path import abspath, basename, dirname, exists, getsize, join
+from os.path import abspath, basename, dirname, exists, join
 from re import search
 from threading import Thread
-from urllib.request import Request, urlopen
 
 from adb_shell.adb_device import AdbDeviceTcp
 from adb_shell.auth.keygen import keygen
@@ -9,6 +8,7 @@ from adb_shell.auth.sign_pythonrsa import PythonRSASigner
 from kivy.app import App
 from kivy.properties import BooleanProperty, ObjectProperty
 from kivy.uix.boxlayout import BoxLayout
+from requests import get
 
 
 class MainView(BoxLayout):
@@ -45,15 +45,19 @@ class MainView(BoxLayout):
             self.loading = False
 
     def _update(self):
-        self.loading = True
-        website = "arm64-v8a"
-        website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
-        pattern = 'download=(.*Matrix.apk)(?=")'
-        content = urlopen(Request(website, headers={"user-agent": "mozilla/5.0"})).read().decode()
-        address = search(pattern, content).group(1)
-        address = f"https://repo.kodinerds.net/{address}"
-        self.results.text = basename(address)
-        self.loading = False
+        try:
+            self.loading = True
+            website = "arm64-v8a"
+            website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
+            pattern = 'download=(.*Matrix.apk)(?=")'
+            content = get(website, headers={"user-agent": "mozilla/5.0"}, allow_redirects=True).content.decode()
+            address = search(pattern, content).group(1)
+            address = f"https://repo.kodinerds.net/{address}"
+            self.results.text = basename(address)
+        except Exception as e:
+            self.results.text = e
+        finally:
+            self.loading = False
 
 
 class Hisendal(App):
