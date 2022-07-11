@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 
 from requests import get, head
 
-CACHE_FOLDER_NAME = abspath(join(dirname(__file__), "cache"))
+CACHE_FOLDER_NAME = abspath(join(dirname(__file__)))
 
 
 def from_address(address: str, suggest: Optional[str] = None) -> str:
