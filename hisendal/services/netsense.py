@@ -1,6 +1,5 @@
 from os.path import abspath, basename, dirname, isabs, join
 from re import search
-from tempfile import mkdtemp
 from typing import Optional
 from urllib.parse import urlparse
 

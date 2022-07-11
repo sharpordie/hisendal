@@ -1,12 +1,12 @@
 from os.path import abspath, basename, dirname, exists, getsize, join
 from re import search
+from threading import Thread
 from urllib.request import Request, urlopen
 
 from adb_shell.adb_device import AdbDeviceTcp
 from adb_shell.auth.keygen import keygen
 from adb_shell.auth.sign_pythonrsa import PythonRSASigner
 from kivy.lang import Builder
-from kivy.properties import BooleanProperty, ObjectProperty
 from kivymd.app import MDApp
 
 from services.netsense import from_address
@@ -35,13 +35,14 @@ CACHE_FOLDER_NAME = abspath(join(dirname(__file__)))
 
 class MainApp(MDApp):
 
-    download_button = ObjectProperty()
-
     def build(self):
         self.theme_cls.theme_style = "Dark"
         return Builder.load_string(KV)
 
     def update(self):
+        Thread(target=self._update).start()
+
+    def _update(self):
         website = "arm64-v8a"
         website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
         pattern = 'download=(.*Matrix.apk)(?=")'
