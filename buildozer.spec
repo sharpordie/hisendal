@@ -41,7 +41,7 @@ requirements = python3, \
                kivy==2.1.0, \
                https://github.com/kivymd/KivyMD/archive/master.zip, \
                pillow, \
-               adb_shell, cryptography, pyasn1, rsa, \
+               adb_shell, cryptography, pyasn1, rsa, aiofiles, \
                requests, certifi, chardet, charset_normalizer, idna, openssl, urllib3
 
 # (str) Custom source folders for requirements
