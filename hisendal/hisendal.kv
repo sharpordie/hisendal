@@ -1,0 +1,20 @@
+<MainView>:
+    results: results
+    BoxLayout:
+        orientation: "vertical"
+        padding: [16, 16, 16, 16]
+        spacing: 16
+        Label:
+            id: results
+            size_hint: 1.0, 0.70
+            text: "HELLO"
+        Button:
+            size_hint: 1.0, 0.15
+            text: "GATHER"
+            on_release: root.gather()
+            disabled: root.loading
+        Button:
+            size_hint: 1.0, 0.15
+            text: "UPDATE"
+            on_release: root.update()
+            disabled: root.loading

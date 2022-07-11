@@ -6,51 +6,28 @@ from urllib.request import Request, urlopen
 from adb_shell.adb_device import AdbDeviceTcp
 from adb_shell.auth.keygen import keygen
 from adb_shell.auth.sign_pythonrsa import PythonRSASigner
-from kivy.lang import Builder
-from kivymd.app import MDApp
+from kivy.app import App
+from kivy.properties import BooleanProperty, ObjectProperty
+from kivy.uix.boxlayout import BoxLayout
 
-from services.netsense import from_address
 
-KV = """
-MDScreen:
-    MDBoxLayout:
-        orientation: "vertical"
-        padding: [16, 16, 16, 16]
-        spacing: 16
-        TextInput:
-            id: txt_inpt
-            text: ""
-            size_hint: 1.0, 0.2
-        MDBoxLayout:
-            orientation: "horizontal"
-            spacing: 16
-            size_hint: 1.0, 0.8
-            MDRectangleFlatButton:
-                on_release: app.update()
-                size_hint: 1.0, 1.0
-                text: "UPDATE"
-"""
+class MainView(BoxLayout):
+    results = ObjectProperty()
+    loading = BooleanProperty(False)
 
-CACHE_FOLDER_NAME = abspath(join(dirname(__file__)))
+    def __init__(self):
+        super(MainView, self).__init__()
 
-class MainApp(MDApp):
-
-    def build(self):
-        self.theme_cls.theme_style = "Dark"
-        return Builder.load_string(KV)
+    def gather(self):
+        Thread(target=self._gather).start()
 
     def update(self):
         Thread(target=self._update).start()
 
-    def _update(self):
-        # website = "arm64-v8a"
-        # website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
-        # pattern = 'download=(.*Matrix.apk)(?=")'
-        # content = urlopen(Request(website, headers={"user-agent": "mozilla/5.0"})).read().decode()
-        # address = search(pattern, content).group(1)
-        # address = f"https://repo.kodinerds.net/{address}"
-        # package = from_address(address)
-        pvt_key = join(CACHE_FOLDER_NAME, "adbkey")
+    def _gather(self):
+        self.loading = True
+
+        pvt_key = join(abspath(join(dirname(__file__))), "adbkey")
         pub_key = pvt_key + ".pub"
         if not exists(pvt_key):
             keygen(pvt_key)
@@ -61,13 +38,27 @@ class MainApp(MDApp):
         try:
             manager = AdbDeviceTcp("192.168.1.62")
             manager.connect(rsa_keys=[PythonRSASigner(pub_bin, pvt_bin)], auth_timeout_s=0.1)
+            self.results.text = manager.shell("getprop ro.product.model")
         except:
-            pass
-        # filesize = getsize(package)
-        # deposit = join("/sdcard", basename(package))
-        # manager.push(package, deposit)
-        # manager.shell(f"cat {deposit} | pm install -S {filesize}")
+            self.results.text = "Authentication required"
+        finally:
+            self.loading = False
+
+    def _update(self):
+        self.loading = True
+        website = "arm64-v8a"
+        website = f"https://repo.kodinerds.net/index.php?action=list&scope=cat&item=Binary%20({website})"
+        pattern = 'download=(.*Matrix.apk)(?=")'
+        content = urlopen(Request(website, headers={"user-agent": "mozilla/5.0"})).read().decode()
+        address = search(pattern, content).group(1)
+        address = f"https://repo.kodinerds.net/{address}"
+        self.results.text = basename(address)
+        self.loading = False
 
 
-if __name__ == "__main__":
-    MainApp().run()
+class Hisendal(App):
+    def build(self):
+        return MainView()
+
+
+Hisendal().run()
