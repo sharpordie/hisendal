@@ -1,6 +1,6 @@
 <hr><div>
 <a href="../.."><img align="right" height="91" src="assets/logo.png" alt="logo"></a>
-<h1>hisendal</h1>
+<h1>Hisendal</h1>
 <p>Dadb usage within Android</p>
 </div><hr>
 
