@@ -15,7 +15,7 @@ Note this example will not work in emulator with a NAT network.
 
 ## `Guidance`
 
-### Change the device address
+### Alter the device address
 
 Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/hisendal/AndroidScreenViewModel.kt).
 
