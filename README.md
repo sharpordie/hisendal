@@ -18,10 +18,6 @@
 Example of an Android application that uses Dadb to connect to an Android device and returns its product name.
 Note this example will not work in emulator with a NAT network.
 
-## FUNDING
-
-<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/kofi.svg" width="260"></a>
-
 ## CAUTION
 
 ### Alter the device address
