@@ -2,11 +2,11 @@
 
 ## SUPPORT
 ## FUNDING
-## SAMPLES
+## 
 ## STARTER
 ## GALLERY
-## PACKAGE
-## INSTALL
+## 
+## 
 ## UPGRADE
 
 ## DONATION
