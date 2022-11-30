@@ -1,11 +1,10 @@
+<div>
+<img align="right" src="https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/61e11d430afb112ea33c3aa5_Button-1-p-800.png" height="40"/>
 <h1><code>Hisendal</code></h1>
+</div>
 
 Example of an Android application that uses Dadb to connect to an Android device and returns its product name.
 Note this example will not work in emulator with a NAT network.
-
-<h2><code>Supports</code></h2>
-
-<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/kofi.svg" width="260"></a>
 
 <h2><code>Guidance</code></h2>
 
