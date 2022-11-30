@@ -7,10 +7,6 @@ Note this example will not work in emulator with a NAT network.
 
 <a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/kofi.svg" width="260"></a>
 
-<h2><samp>MARKETS</samp></h2>
-
-<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/playstore.svg" width="260"></a>
-
 <h2><samp>STARTER</samp></h2>
 
 ### Alter the device address
