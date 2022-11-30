@@ -7,9 +7,6 @@
 ## GALLERY
 ## EXECUTE
 ## 
-## ASPECTS
-## 
-## UPGRADE
 
 ## DONATION
 ## EXAMPLES
