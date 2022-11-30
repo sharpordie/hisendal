@@ -1,5 +1,6 @@
 # HISENDAL
 
+<!--
 ## PREFACE
 ## FUNDING
 ## FEATURE
@@ -10,27 +11,18 @@
 ## PREVIEW
 ## RELEASE
 ## TEASING
-## ANSWERS
-## REASONS
-## PURPOSE
+-->
 
-## WARNING
-## CAUTION
-
-## DONATION
-## EXAMPLES
-## PICTURES
-## SHOWCASE
-## DOWNLOAD
+## PREFACE
 
 Example of an Android application that uses Dadb to connect to an Android device and returns its product name.
 Note this example will not work in emulator with a NAT network.
 
-## `SUPPORTS`
+## FUNDING
 
 <a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/kofi.svg" width="260"></a>
 
-## `STARTING`
+## CAUTION
 
 ### Alter the device address
 
@@ -48,6 +40,6 @@ Change refresh parameter in [Device.kt](app/src/main/java/com/example/hisendal/D
 handler = Dadb.discover(address, keygen(refresh = true))
 ```
 
-## `SHOWCASE`
+## GALLERY
 
 <a href="assets/img1.png"><img src="assets/img1.png" width="32%"/></a><a><img src="assets/none.png" width="2%"/></a><a href="assets/img2.png"><img src="assets/img2.png" width="32%"/></a><a><img src="assets/none.png" width="2%"/></a><a href="assets/img3.png"><img src="assets/img3.png" width="32%"/></a>
