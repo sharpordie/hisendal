@@ -5,6 +5,7 @@
 </div><hr>
 
 <!--
+## `COVERAGE`
 ## `DOWNLOAD`
 ## `EXAMPLES`
 ## `GUIDANCE`
