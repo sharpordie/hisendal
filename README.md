@@ -1,5 +1,5 @@
 <hr><div>
-<a href="../.."><img align="right" height="94" src="https://user-images.githubusercontent.com/72373746/205586156-a45fc4a0-8aa7-4a71-908c-bae4c07ed41d.png"></a>
+<a href="../.."><img align="right" height="94" src="assets/logo.png"></a>
 <h1><code>HISENDAL</code></h1>
 <p>Dadb Usage Within Android</p>
 </div><hr>

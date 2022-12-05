@@ -4,7 +4,6 @@ import android.content.Context
 import dadb.AdbKeyPair
 import dadb.AdbShellResponse
 import dadb.Dadb
-import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
