@@ -19,6 +19,7 @@
 <h2><samp>OVERVIEW</samp></h2>
 
 Example of an Android application that uses Dadb to connect to an Android device and returns its product name.
+
 Note this example will not work in emulator with a NAT network.
 
 <h2><samp>FUNDINGS</samp></h2>
