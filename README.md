@@ -21,6 +21,11 @@
 Example of an Android application that uses Dadb to connect to an Android device and returns its product name.
 Note this example will not work in emulator with a NAT network.
 
+<h2><samp>FUNDINGS</samp></h2>
+
+<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/kofi.svg" width="260"></a>
+<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/patreon.svg" width="260"></a>
+
 <h2><samp>STARTING</samp></h2>
 
 ### Alter the Device Address
