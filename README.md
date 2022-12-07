@@ -39,6 +39,6 @@ Change refresh parameter in [Device.kt](app/src/main/java/com/example/hisendal/D
 handler = Dadb.discover(address, keygen(refresh = true))
 ```
 
-<h2><samp>SHOWCASE</samp></h2>
+<h2><samp>PICTURES</samp></h2>
 
 <div><a href="assets/img1.png"><img src="assets/img1.png" width="32%"/></a><a><img src="assets/none.png" width="2%"/></a><a href="assets/img2.png"><img src="assets/img2.png" width="32%"/></a><a><img src="assets/none.png" width="2%"/></a><a href="assets/img3.png"><img src="assets/img3.png" width="32%"/></a></div>
