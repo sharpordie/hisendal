@@ -1,12 +1,8 @@
----
-
-<div></h2>
+<div><hr>
 <a href="../.."><img align="left" height="91" src="assets/logo.png"></a>
 <h1>HISENDAL</h1>
 <p>Dadb Usage Within Android</p>
-</h2></div>
-
----
+<hr></div>
 
 <!--
 <h2><samp>COVERAGE</samp></h2>
@@ -20,16 +16,16 @@
 <h2><samp>STARTING</samp></h2>
 -->
 
+<h2><samp>FUNDINGS</samp></h2>
+
+<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/kofi.svg" width="260"></a>
+<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/patreon.svg" width="260"></a>
+
 <h2><samp>OVERVIEW</samp></h2>
 
 Example of an Android application that uses Dadb to connect to an Android device and returns its product name.
 
 Note this example will not work in emulator with a NAT network.
-
-<h2><samp>FUNDINGS</samp></h2>
-
-<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/kofi.svg" width="260"></a>
-<a href="../.." target="_blank"><img src="https://raw.githubusercontent.com/sharpordie/mybadges/main/src/patreon.svg" width="260"></a>
 
 <h2><samp>STARTING</samp></h2>
 
