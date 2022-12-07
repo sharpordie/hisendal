@@ -1,8 +1,8 @@
-<header><hr>
+<section><hr>
 <a href="../.."><img align="right" height="91" src="assets/logo.png"></a>
 <h1>HISENDAL</h1>
 <p>Dadb Usage Within Android</p>
-<hr></header>
+<hr></section>
 
 <!--
 <h2><samp>COVERAGE</samp></h2>
