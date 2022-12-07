@@ -1,8 +1,12 @@
-<div><hr>
-<a href="../.."><img align="right" height="91" src="assets/logo.png"></a>
+---
+
+<div></h2>
+<a href="../.."><img align="left" height="91" src="assets/logo.png"></a>
 <h1>HISENDAL</h1>
 <p>Dadb Usage Within Android</p>
-<hr></div>
+</h2></div>
+
+---
 
 <!--
 <h2><samp>COVERAGE</samp></h2>
