@@ -12,14 +12,15 @@
 
 ## <samp>HISENDAL</samp>
 
-Example of an Android application that uses Dadb to connect to an Android device and returns its product name.
-Note this example will not work in emulator with a NAT network.
+Android application that uses the Dadb library.
+
+This will not work in emulator with a NAT network.
 
 ## <samp>SHOWCASE</samp>
 
-<div><a href="assets/img1.png"><img src="assets/img1.png" width="32%"/></a><a><img src="assets/none.png" width="2%"/></a><a href="assets/img2.png"><img src="assets/img2.png" width="32%"/></a><a><img src="assets/none.png" width="2%"/></a><a href="assets/img3.png"><img src="assets/img3.png" width="32%"/></a></div>
+<div><a href="assets/img1.png"><img src="assets/img1.png" width="32.666%"/></a><a><img src="assets/none.png" width="1%"/></a><a href="assets/img2.png"><img src="assets/img2.png" width="32.666%"/></a><a><img src="assets/none.png" width="1%"/></a><a href="assets/img3.png"><img src="assets/img3.png" width="32.666%"/></a></div>
 
-## <samp>STARTING</samp>
+## <samp>GUIDANCE</samp>
 
 ### Alter the Device Address
 
