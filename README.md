@@ -1,6 +1,6 @@
 **Ensure you are on a bridged network**
 
-This example will not work on a NAT network, so use device or an emulator with a bridged network interface.
+This example will not work on a NAT network, so use a device or an emulator with a bridged network interface.
 
 **Alter the device address**
 
