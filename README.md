@@ -26,4 +26,4 @@ handler = Dadb.discover(address, keygen(refresh = true))
 
 ## <samp>GALLERY</samp>
 
-<img src="assets/img1.png" width="32.333%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img2.png" width="32.333%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img2.png" width="32.333%"/>
+<img src="assets/img1.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img2.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/>
