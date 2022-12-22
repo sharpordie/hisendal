@@ -1,3 +1,7 @@
+**Ensure you are on a bridge network**
+
+This example will not work on a NAT network, therefore use a physical device or an emulator with a bridged network interface.
+
 **Alter the device address**
 
 Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/hisendal/AndroidScreenViewModel.kt).
