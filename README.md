@@ -11,6 +11,10 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 ## <samp>SCHEDULE</samp>
 -->
 
+## <samp>OVERVIEW</samp>
+
+<img src="assets/img1.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img2.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/>
+
 ## <samp>GUIDANCE</samp>
 
 <table>
@@ -40,7 +44,3 @@ Change refresh parameter in [Device.kt](app/src/main/java/com/example/hisendal/D
 ```kotlin
 handler = Dadb.discover(address, keygen(refresh = true))
 ```
-
-## <samp>OVERVIEW</samp>
-
-<img src="assets/img1.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img2.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/>
