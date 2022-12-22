@@ -15,7 +15,7 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ### Verify the device network
 
-<img src"https://cdn-icons-png.flaticon.com/512/3061/3061375.png" align="right" />
+<img align="left" src="https://cdn-icons-png.flaticon.com/512/3061/3061375.png" height="80"/>
 
 This example will not work on a device with NAT network which is the default on Android emulators.
 Therefore you will need to use a physical Android device or an Android emulator that supports bridge network.
