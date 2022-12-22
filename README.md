@@ -44,7 +44,7 @@ Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/his
 private var address = mutableStateOf("192.168.X.XX")
 ```
 
-### Vanish the authorization keys
+### Vanish the connection keys
 
 Change refresh parameter in [Device.kt](app/src/main/java/com/example/hisendal/Device.kt).
 
