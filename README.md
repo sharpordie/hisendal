@@ -9,8 +9,8 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 ## <samp>RESOURCE</samp>
 ## <samp>SOLUTION</samp>
 ## <samp>WARINESS</samp>
-## <samp>PRACTICE</samp>
-## <samp>RHETORIC</samp>
+## <samp>PLANNING</samp>
+## <samp>SCHEDULE</samp>
  
 
 ## <samp>PREFACE</samp>
