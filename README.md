@@ -2,21 +2,12 @@
 
 Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
-## <samp>OVERVIEW</samp>
-## <samp>EXAMPLES</samp>
-## <samp>SUPPORTS</samp>
-## <samp>SOLUTION</samp>
-## <samp>GUIDANCE</samp>
-## <samp>STARTING</samp>
-## <samp>SCHEDULE</samp>
-
 <!--
 ## <samp>OVERVIEW</samp>
 ## <samp>EXAMPLES</samp>
 ## <samp>SUPPORTS</samp>
 ## <samp>SOLUTION</samp>
 ## <samp>GUIDANCE</samp>
-## <samp>STARTING</samp>
 ## <samp>SCHEDULE</samp>
 -->
 
