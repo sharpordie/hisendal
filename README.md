@@ -5,11 +5,11 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 ## <samp>OVERVIEW</samp>
 ## <samp>EXAMPLES</samp>
 ## <samp>SUPPORTS</samp>
-## <samp>GUIDANCE</samp>
-## <samp>RESOURCE</samp>
 ## <samp>SOLUTION</samp>
-## <samp>WARINESS</samp>
 ## <samp>SCHEDULE</samp>
+## <samp>GUIDANCE</samp>
+## <samp>WARINESS</samp>
+## <samp>RESOURCE</samp>
  
 
 ## <samp>PREFACE</samp>
