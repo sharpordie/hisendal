@@ -2,19 +2,12 @@
 
 Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
-## <samp>GLASSWARE</samp>
-## <samp>PROCEDURE</samp>
-## <samp>OPERATION</samp>
-## <samp>SPECIMENS</samp>
-## <samp>REFERENCE</samp>
-## <samp>REFERENCE</samp>
-
-## <samp>EXAMPLES</samp>
-## <samp>PICTURES</samp>
-## <samp>PLATFORM</samp>
-## <samp>COMMENTS</samp>
-## <samp>ANALYSIS</samp>
-## <samp>THOUGHTS</samp>
+## <samp>PREFACE</samp>
+## <samp>SURFACE</samp>
+## <samp>SAMPLES</samp>
+## <samp>STARTER</samp>
+## <samp>GALLERY</samp>
+## <samp>ANSWERS</samp>
 
 ### Ensure you are on a bridged network
 
