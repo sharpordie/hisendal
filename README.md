@@ -17,6 +17,12 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ## <samp>GUIDANCE</samp>
 
+### Change the device network
+
+This example will not work on a device with NAT network which is the default on Android emulators.
+Therefore you will need to use a physical Android device or an Android emulator that supports bridge network.
+
+<!--
 <table>
   <tr>
     <td align="center" valign="middle">
@@ -28,7 +34,8 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
     </td>
   </tr>
 </table>
-  
+-->
+
 ### Change the device address
 
 Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/hisendal/AndroidScreenViewModel.kt).
