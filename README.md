@@ -4,11 +4,11 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ## <samp>STARTER</samp>
 
-**Ensure you are on a bridged network**
+###Ensure you are on a bridged network**
 
 This example will not work on a NAT network, so use a device or an emulator with a bridged network interface.
 
-**Alter the device address**
+###Alter the device address**
 
 Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/hisendal/AndroidScreenViewModel.kt).
 
