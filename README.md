@@ -5,6 +5,9 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 ## <samp>GLASSWARE</samp>
 ## <samp>PROCEDURE</samp>
 ## <samp>OPERATION</samp>
+## <samp>SPECIMENS</samp>
+## <samp>REFERENCE</samp>
+ 
 
 ### Ensure you are on a bridged network
 
