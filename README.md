@@ -17,7 +17,7 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ## <samp>GUIDANCE</samp>
 
-### Change the device network
+### Verify the device network
 
 This example will not work on a device with NAT network which is the default on Android emulators.
 Therefore you will need to use a physical Android device or an Android emulator that supports bridge network.
