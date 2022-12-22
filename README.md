@@ -17,23 +17,19 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 <table>
   <tr>
-    <td width="20%">
-      <img src="https://cdn-icons-png.flaticon.com/512/3061/3061375.png"/>
+    <td align="center" valign="middle">
+      <p><br><img src="https://cdn-icons-png.flaticon.com/512/2058/2058197.png"/><br></p>
     </td>
-    <td>
+    <td width="90%">
       This example will not work on a device with NAT network which is the default on Android emulators.
       Therefore you will need to use a physical Android device or an Android emulator that supports bridge network.
-      Actually using bridge network with the default emulators is doable, but it is not that simple and is quite different from one host system to another.
     </td>
   </tr>
 </table>
 
-<div>
-<img align="left" src="https://cdn-icons-png.flaticon.com/512/3061/3061375.png" height="65"/>
 This example will not work on a device with NAT network which is the default on Android emulators.
 Therefore you will need to use a physical Android device or an Android emulator that supports bridge network.
 Actually using bridge network with the default emulators is doable, but it is not that simple and is quite different from one host system to another.
-</div>
   
 ### Change the device address
 
