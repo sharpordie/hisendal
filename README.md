@@ -3,6 +3,7 @@
 Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
 ## <samp>OVERVIEW</samp>
+## <samp>EXAMPLES</samp>
 ## <samp>HANDLING</samp>
 ## <samp>GUIDANCE</samp>
 ## <samp>PICTURES</samp>
