@@ -5,6 +5,7 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 ## <samp>PREFACE</samp>
 ## <samp>SURFACE</samp>
 ## <samp>GALLERY</samp>
+## <samp>SERVICE</samp>
 ## <samp>HANDOUT</samp>
 ## <samp>WARNING</samp>
 ## <samp>EXAMPLE</samp>
