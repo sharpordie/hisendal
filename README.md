@@ -4,9 +4,10 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ## <samp>PREFACE</samp>
 ## <samp>SURFACE</samp>
+## <samp>GALLERY</samp>
+## <samp>EXAMPLE</samp>
 ## <samp>SAMPLES</samp>
 ## <samp>STARTER</samp>
-## <samp>GALLERY</samp>
 ## <samp>ANSWERS</samp>
 
 ### Ensure you are on a bridged network
