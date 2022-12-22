@@ -13,8 +13,6 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ## <samp>GUIDANCE</samp>
 
-### Verify the device network
-
 <table>
   <tr>
     <td align="center" valign="middle">
