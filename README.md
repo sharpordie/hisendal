@@ -14,7 +14,7 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 ## <samp>PLATFORM</samp>
 ## <samp>COMMENTS</samp>
 ## <samp>ANALYSIS</samp>
- 
+## <samp>THOUGHTS</samp>
 
 ### Ensure you are on a bridged network
 
