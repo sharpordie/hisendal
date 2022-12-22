@@ -5,8 +5,7 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 ## <samp>OVERVIEW</samp>
 ## <samp>EXAMPLES</samp>
 ## <samp>SUPPORTS</samp>
-## <samp>DONATION</samp>
-## <samp>FUNDINGS</samp>
+## <samp>SPONSORS</samp>
 ## <samp>SOLUTION</samp>
 ## <samp>SCHEDULE</samp>
 ## <samp>GUIDANCE</samp>
