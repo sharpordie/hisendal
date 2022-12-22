@@ -1,6 +1,6 @@
 # <samp>HISENDAL</samp>
 
-Android application that uses the Dadb library.
+Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
 ## <samp>STARTER</samp>
 
