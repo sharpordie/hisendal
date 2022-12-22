@@ -8,11 +8,8 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 ## <samp>SUPPORTS</samp>
 ## <samp>SOLUTION</samp>
 ## <samp>GUIDANCE</samp>
-## <samp>FEATURES</samp>
 ## <samp>SCHEDULE</samp>
 -->
-
-## <samp>FEATURES</samp>
 
 ## <samp>GUIDANCE</samp>
 
