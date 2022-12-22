@@ -13,11 +13,11 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ## <samp>GUIDANCE</samp>
 
-**Ensure you are on a bridged network**
+#### Ensure you are on a bridged network
 
 This example will not work on a NAT network, so use a device or an emulator with a bridged network interface.
 
-**Alter the device address**
+#### Alter the device address
 
 Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/hisendal/AndroidScreenViewModel.kt).
 
@@ -25,6 +25,7 @@ Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/his
 private var address = mutableStateOf("192.168.X.XX")
 ```
 
+#### Force refreshing the keys
 **Force refreshing the keys**
 
 Change refresh parameter in [Device.kt](app/src/main/java/com/example/hisendal/Device.kt).
