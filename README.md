@@ -1,6 +1,4 @@
-<div>
 <h1><samp>HISENDAL</samp></h1>
-</div>
 
 Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
