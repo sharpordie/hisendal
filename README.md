@@ -1,4 +1,4 @@
-<h1><samp>HISENDAL</samp></h1>
+# <samp>HISENDAL</samp>
 
 Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
@@ -23,6 +23,7 @@ This example will not work on a device with NAT network which is the default on 
 Therefore you will need to use a physical Android device or an Android emulator that supports bridge network.
 
 <!--
+
 <table>
   <tr>
     <td align="center" valign="middle">
@@ -34,6 +35,7 @@ Therefore you will need to use a physical Android device or an Android emulator 
     </td>
   </tr>
 </table>
+
 -->
 
 ### Change the device address
