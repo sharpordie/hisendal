@@ -1,14 +1,12 @@
-# <samp>HISENDAL</samp>
+# <samp>OVERVIEW</samp>
 
 Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
-## <samp>OVERVIEW</samp>
-
 <img src="assets/img1.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img2.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/>
 
-## <samp>GUIDANCE</samp>
+# <samp>GUIDANCE</samp>
 
-### Verify the device network
+## 1. Verify the device network
 
 This example will not work on a device with NAT network which is the default on Android emulators.
 Therefore you will need to use a physical Android device or an Android emulator that supports bridge network.
@@ -29,7 +27,7 @@ Therefore you will need to use a physical Android device or an Android emulator 
 
 -->
 
-### Change the device address
+## 2. Change the device address
 
 Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/hisendal/AndroidScreenViewModel.kt).
 
@@ -37,7 +35,7 @@ Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/his
 private var address = mutableStateOf("192.168.X.XX")
 ```
 
-### Vanish the connection keys
+## 3. Vanish the connection keys
 
 Change refresh parameter in [Device.kt](app/src/main/java/com/example/hisendal/Device.kt).
 
