@@ -6,7 +6,7 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 # <samp>GUIDANCE</samp>
 
-### 1. Verify the device network
+### Verify the device network
 
 This example will not work on a device with NAT network which is the default on Android emulators.
 Therefore you will need to use a physical Android device or an Android emulator that supports bridge network.
@@ -27,7 +27,7 @@ Therefore you will need to use a physical Android device or an Android emulator 
 
 -->
 
-### 2. Change the device address
+### Change the device address
 
 Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/hisendal/AndroidScreenViewModel.kt).
 
@@ -35,7 +35,7 @@ Replace address in [AndroidScreenViewModel.kt](app/src/main/java/com/example/his
 private var address = mutableStateOf("192.168.X.XX")
 ```
 
-### 3. Vanish the connection keys
+### Vanish the connection keys
 
 Change refresh parameter in [Device.kt](app/src/main/java/com/example/hisendal/Device.kt).
 
