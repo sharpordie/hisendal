@@ -1,10 +1,10 @@
-# <samp>OVERVIEW</samp>
+# <pre>OVERVIEW</pre>
 
 Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
 <img src="assets/img1.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img2.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/>
 
-# <samp>GUIDANCE</samp>
+# <pre>GUIDANCE</pre>
 
 ### Verify the device network
 
