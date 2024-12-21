@@ -1,6 +1,6 @@
 ## OVERVIEW
 
-<div id="toc"> <!-- both work, toc or user-content-toc -->
+<div> <!-- both work, toc or user-content-toc -->
   <ul>
     <summary>
       <h2><b>🔗Connect with me ➜</b></h2>
