@@ -1,7 +1,7 @@
 ## OVERVIEW
 
 <div id="toc"> <!-- both work, toc or user-content-toc -->
-  <ul style="list-style: none;">
+  <ul>
     <summary>
       <h2><b>🔗Connect with me ➜</b></h2>
     </summary>
