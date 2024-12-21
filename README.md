@@ -16,14 +16,6 @@
   </ul>
 </div>
 
-<div>
-  <ul>
-    <summary>
-      <h2>OVERVIEW</h2>
-    </summary>
-  </ul>
-</div>
-
 Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb) library.
 
 <img src="assets/img1.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img2.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/><img src="assets/none.png" width="1.5%"/><img src="assets/img3.png" width="23.875%"/>
@@ -34,13 +26,11 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ## FEATURES
 
-**Update and tweak Windows**
+- **Update and tweak Windows**
+  Lorem ipsum odor amet, consectetuer adipiscing elit.
 
-Lorem ipsum odor amet, consectetuer adipiscing elit.
-
-**Update and tweak Firefox**
-
-Lorem ipsum odor amet, consectetuer adipiscing elit.
+- **Update and tweak Firefox**
+  Lorem ipsum odor amet, consectetuer adipiscing elit.
 
 - Lorem ipsum Alabama
 - Lorem ipsum Alabama
