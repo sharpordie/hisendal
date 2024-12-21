@@ -28,11 +28,11 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 **Update and tweak Windows**  
 Lorem ipsum odor amet, consectetuer adipiscing elit.
-
 <h2></h2>
-
 **Update and tweak Firefox**  
 Lorem ipsum odor amet, consectetuer adipiscing elit.
+
+## DONATION
 
 ## GUIDANCE
 
