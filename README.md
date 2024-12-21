@@ -26,11 +26,11 @@ Android application that uses the [dadb](https://github.com/mobile-dev-inc/dadb)
 
 ## FEATURES
 
-- **Update and tweak Windows**  
-  Lorem ipsum odor amet, consectetuer adipiscing elit.
+**Update and tweak Windows**
+Lorem ipsum odor amet, consectetuer adipiscing elit.
 
-- **Update and tweak Firefox**  
-  Lorem ipsum odor amet, consectetuer adipiscing elit.
+**Update and tweak Firefox**
+Lorem ipsum odor amet, consectetuer adipiscing elit.
 
 - Lorem ipsum Alabama
 - Lorem ipsum Alabama
